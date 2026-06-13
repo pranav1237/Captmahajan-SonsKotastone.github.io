@@ -1,0 +1,12 @@
+{
+  "name": "capt-mahajan-kotastone",
+  "version": "1.0.0",
+  "description": "Capt. Mahajan & Sons KotaStone Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
