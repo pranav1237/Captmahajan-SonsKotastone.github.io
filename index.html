@@ -414,106 +414,106 @@ target="_blank">
 
 <script>
 
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("P6wKHr_MkAY5jJPi7");
 
 let cart = [];
 
 function addToCart(product){
 
-cart.push(product);
+    cart.push(product);
 
-renderCart();
+    renderCart();
 
-alert(product + " added to cart");
+    alert(product + " added to cart");
 
 }
 
 function renderCart(){
 
-const container =
-document.getElementById("cartItems");
+    const container = document.getElementById("cartItems");
 
-if(cart.length===0){
+    if(cart.length === 0){
 
-container.innerHTML="No items added.";
+        container.innerHTML = "No items added.";
 
-return;
+        return;
+    }
 
-}
+    container.innerHTML = "";
 
-container.innerHTML="";
+    cart.forEach(item => {
 
-cart.forEach(item=>{
+        container.innerHTML += `
+            <div class="cart-item">${item}</div>
+        `;
 
-container.innerHTML +=
-`<div class="cart-item">${item}</div>`;
-
-});
+    });
 
 }
 
 document
 .getElementById("orderForm")
-.addEventListener("submit",function(e){
+.addEventListener("submit", function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-if(cart.length===0){
+    if(cart.length === 0){
 
-alert("Please add products first");
+        alert("Please add products first");
 
-return;
-}
+        return;
+    }
 
-const name =
-document.getElementById("customerName").value;
+    const name =
+    document.getElementById("customerName").value;
 
-const phone =
-document.getElementById("customerPhone").value;
+    const phone =
+    document.getElementById("customerPhone").value;
 
-const templateParams = {
+    const templateParams = {
 
-customer_name:name,
+        customer_name: name,
 
-customer_phone:phone,
+        customer_phone: phone,
 
-order_items:cart.join(", "),
+        order_items: cart.join(", "),
 
-owner_email:"chander151973@gmail.com"
+        owner_email: "chander151973@gmail.com"
 
-};
+    };
 
-emailjs.send(
-"YOUR_SERVICE_ID",
-"YOUR_TEMPLATE_ID",
-templateParams
-)
+    emailjs.send(
+        "service_yefr2yx",
+        "template_lzgf4nl",
+        templateParams
+    )
+    .then(function(response){
 
-.then(function(){
+        console.log("SUCCESS!", response);
 
-alert("Order sent successfully!");
+        alert("Order sent successfully!");
 
-cart=[];
+        cart = [];
 
-renderCart();
+        renderCart();
 
-document
-.getElementById("orderForm")
-.reset();
+        document
+        .getElementById("orderForm")
+        .reset();
 
-})
+    })
+    .catch(function(error){
 
-.catch(function(error){
+        console.error("EMAILJS ERROR:", error);
 
-console.log(error);
+        alert(
+            "Email sending failed. Check browser console (F12)."
+        );
 
-alert("Failed to send order");
-
-});
+    });
 
 });
 
 </script>
-
 </body>
 </html>
