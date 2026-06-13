@@ -9,17 +9,8 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-const port = process.env.PORT || 8080;
-app.listen(port);
+const PORT = process.env.PORT || 8080;
 
-{
-  "name": "kotastone-site",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.21.2"
-  }
-}
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
