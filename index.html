@@ -417,12 +417,63 @@ target="_blank">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
-
 emailjs.init("P6wKHr_MkAY5jJPi7");
 
-// Initialize cart from localStorage
+// Cart handling using localStorage
 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
+function addToCart(product) {
+  cart.push(product);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+  alert(product + ' added to cart');
+}
+
+function renderCart() {
+  const container = document.getElementById('cartItems');
+  if (cart.length === 0) {
+    container.innerHTML = 'No items added.';
+    return;
+  }
+  container.innerHTML = '';
+  cart.forEach(item => {
+    container.innerHTML += `<div class="cart-item">${item}</div>`;
+  });
+}
+
+// Initialize cart display
+renderCart();
+
+// Order form submission
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (cart.length === 0) {
+    alert('Please add products first');
+    return;
+  }
+  const name = document.getElementById('customerName').value;
+  const phone = document.getElementById('customerPhone').value;
+  const templateParams = {
+    customer_name: name,
+    customer_phone: phone,
+    order_items: cart.join(', '),
+    owner_email: 'chander151973@gmail.com'
+  };
+  emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
+    .then(function(response) {
+      console.log('SUCCESS!', response);
+      alert('Order sent successfully!');
+      localStorage.removeItem('cart');
+      cart = [];
+      renderCart();
+      document.getElementById('orderForm').reset();
+    })
+    .catch(function(error) {
+      console.error('EMAILJS ERROR:', error);
+      alert('Email sending failed. Check browser console (F12).');
+    });
+});
+</script>
 function addToCart(product) {
     cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
