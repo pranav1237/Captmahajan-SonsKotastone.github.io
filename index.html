@@ -256,7 +256,66 @@ min-width:260px;
 
 <body>
 
-<!-- HERO -->
+<section class="section" id="categories">
+  <h2 class="section-title">Our Categories</h2>
+  <div class="category-grid">
+    <a href="kota.html" class="category-card">
+      <div class="card-content">
+        <h3>Kota Stone</h3>
+        <p>Explore premium Kota Stone collections</p>
+      </div>
+    </a>
+    <a href="granite.html" class="category-card">
+      <div class="card-content">
+        <h3>Granite</h3>
+        <p>Durable granite for any project</p>
+      </div>
+    </a>
+    <a href="marble.html" class="category-card">
+      <div class="card-content">
+        <h3>Marble</h3>
+        <p>Elegant marble designs</p>
+      </div>
+    </a>
+    <a href="tiles.html" class="category-card">
+      <div class="card-content">
+        <h3>Tiles</h3>
+        <p>Versatile tile options</p>
+      </div>
+    </a>
+    <a href="others.html" class="category-card">
+      <div class="card-content">
+        <h3>Others</h3>
+        <p>Miscellaneous stone products</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<style>
+  .category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:1.5rem;
+    justify-items:center;
+    margin-top:20px;
+  }
+  .category-card{
+    display:block;
+    width:100%;
+    padding:2rem;
+    background:#c6922d;
+    color:#fff;
+    text-align:center;
+    border-radius:12px;
+    text-decoration:none;
+    transition:transform .3s, background .3s;
+  }
+  .category-card:hover{
+    background:#a97c20;
+    transform:translateY(-5px);
+  }
+</style>
 
 <section class="hero">
 
@@ -268,219 +327,7 @@ min-width:260px;
 </div>
 
 </section>
-<nav class="category-nav">
-  <ul>
-    <li><a href="#kota">KotaStone</a></li>
-    <li><a href="#granite">Granite</a></li>
-    <li><a href="#marble">Marble</a></li>
-    <li><a href="#tiles">Tiles</a></li>
-    <li><a href="#others">Others</a></li>
-  </ul>
-</nav>
 
-<!-- CATEGORY SECTIONS -->
-    <section id="home" class="section">
-      <h2 class="section-title">Welcome to Capt. Mahajan & Sons KotaStone</h2>
-      <p>Explore our premium stone and tile collections.</p>
-      <ul>
-        <li><a href="kota.html">Kota Stone</a></li>
-        <li><a href="granite.html">Granite</a></li>
-        <li><a href="marble.html">Marble</a></li>
-        <li><a href="tiles.html">Tiles</a></li>
-        <li><a href="others.html">Others</a></li>
-      </ul>
-    </section>
-<section id="granite" class="section category-section">
-  <h2 class="section-title">Granite</h2>
-  <div class="info">
-      <div class="product">
-        <img src="https://i.ibb.co/GQBrG5fw/IMG-20260614-WA0062.jpg" />
-        <div class="product-content">
-          <h3>Granite 1</h3>
-          <button onclick="addToCart('Granite 1')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/gLvLqCW7/IMG-20260614-WA0049.jpg" />
-        <div class="product-content">
-          <h3>Granite 2</h3>
-          <button onclick="addToCart('Granite 2')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/9kgGcj4r/IMG-20260614-WA0031.jpg" />
-        <div class="product-content">
-          <h3>Granite 3</h3>
-          <button onclick="addToCart('Granite 3')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/35Pq4thf/IMG-20260614-WA0029.jpg" />
-        <div class="product-content">
-          <h3>Granite 4</h3>
-          <button onclick="addToCart('Granite 4')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/xtL1CLWm/IMG-20260614-WA0018.jpg" />
-        <div class="product-content">
-          <h3>Granite 5</h3>
-          <button onclick="addToCart('Granite 5')">Add To Cart</button>
-        </div>
-      </div>
-  </div>
-</section>
-<section id="marble" class="section category-section">
-  <h2 class="section-title">Marble</h2>
-  <div class="info">
-
-      <div class="product">
-        <img src="https://i.ibb.co/VFq94hp/IMG-20260614-WA0077.jpg" />
-        <div class="product-content">
-          <h3>Marble 1</h3>
-          <button onclick="addToCart('Marble 1')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/7t8TKG7W/IMG-20260614-WA0075.jpg" />
-        <div class="product-content">
-          <h3>Marble 2</h3>
-          <button onclick="addToCart('Marble 2')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/21QzWWFV/IMG-20260614-WA0072.jpg" />
-        <div class="product-content">
-          <h3>Marble 3</h3>
-          <button onclick="addToCart('Marble 3')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/RGG0wFyZ/IMG-20260614-WA0068.jpg" />
-        <div class="product-content">
-          <h3>Marble 4</h3>
-          <button onclick="addToCart('Marble 4')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/PvwZgsyH/IMG-20260614-WA0076.jpg" />
-        <div class="product-content">
-          <h3>Marble 5</h3>
-          <button onclick="addToCart('Marble 5')">Add To Cart</button>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/21QzWWFV/IMG-20260614-WA0072.jpg" />
-        <div class="product-content">
-          <h3>Marble 6</h3>
-          <button onclick="addToCart('Marble 6')">Add To Cart</button>
-        </div>
-      </div>
-  </div>
-</section>
-<section id="tiles" class="section category-section">
-  <h2 class="section-title">Tiles</h2>
-  <div class="info">
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/pr1qqpZt/IMG-20260614-WA0067.jpg" />
-  <div class="product-content">
-    <h3>Tile 3</h3>
-    <button onclick="addToCart('Tile 3')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/NgmTd7bJ/IMG-20260614-WA0055.jpg" />
-  <div class="product-content">
-    <h3>Tile 4</h3>
-    <button onclick="addToCart('Tile 4')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/ymt1v13R/IMG-20260614-WA0054.jpg" />
-  <div class="product-content">
-    <h3>Tile 5</h3>
-    <button onclick="addToCart('Tile 5')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/hJTjChZT/IMG-20260614-WA0051.jpg" />
-  <div class="product-content">
-    <h3>Tile 6</h3>
-    <button onclick="addToCart('Tile 6')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/VYFTbg1w/IMG-20260614-WA0043.jpg" />
-  <div class="product-content">
-    <h3>Tile 7</h3>
-    <button onclick="addToCart('Tile 7')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/HfBdDKLB/IMG-20260614-WA0038.jpg" />
-  <div class="product-content">
-    <h3>Tile 8</h3>
-    <button onclick="addToCart('Tile 8')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/5WXH9Lxf/IMG-20260614-WA0027.jpg" />
-  <div class="product-content">
-    <h3>Tile 9</h3>
-    <button onclick="addToCart('Tile 9')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/27DjJqC7/IMG-20260614-WA0021.jpg" />
-  <div class="product-content">
-    <h3>Tile 10</h3>
-    <button onclick="addToCart('Tile 10')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/v6XTCt31/IMG-20260614-WA0017.jpg" />
-  <div class="product-content">
-    <h3>Tile 11</h3>
-    <button onclick="addToCart('Tile 11')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/hFYssNNR/IMG-20260614-WA0000.jpg" />
-  <div class="product-content">
-    <h3>Tile 12</h3>
-    <button onclick="addToCart('Tile 12')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/39tcmjm5/IMG-20260614-WA0008.jpg" />
-  <div class="product-content">
-    <h3>Tile 13</h3>
-    <button onclick="addToCart('Tile 13')">Add To Cart</button>
-  </div>
-</div>
-<div class="product">
-  <img src="https://i.ibb.co/NnCnFJb4/IMG-20260614-WA0015.jpg" />
-  <div class="product-content">
-    <h3>Tile 14</h3>
-    <button onclick="addToCart('Tile 14')">Add To Cart</button>
-  </div>
-</div>
-  </div>
-</section>
-<section id="others" class="section category-section">
-  <h2 class="section-title">Others</h2>
-  <div class="info">
-  <div class="product">
-    <img src="https://i.ibb.co/XZVnr1pQ/IMG-20260614-WA0007.jpg" />
-    <div class="product-content">
-      <h3>Other Product 1</h3>
-      <button onclick="addToCart('Other Product 1')">Add To Cart</button>
-    </div>
-  </div>
-</div>
-</section>
 <!-- ABOUT -->
 
 <section class="section">
@@ -507,64 +354,6 @@ min-width:260px;
 </div>
 
 </section>
-
-<!-- PRODUCTS -->
-
-<section id="products" class="section">
-
-<h2 class="section-title">Our Products</h2>
-
-<div class="carousel-container">
-
-<div class="carousel">
-
-<div class="product">
-<img src="https://i.ibb.co/nNJk4Zm8/1000058338-1.jpg">
-<div class="product-content">
-<h3>Kota Stone Premium</h3>
-<button onclick="addToCart('Kota Stone Premium')">
-Add To Cart
-</button>
-</div>
-</div>
-
-<div class="product">
-<img src="https://i.ibb.co/NntVhpbQ/1000058351-1.jpg">
-<div class="product-content">
-<h3>Designer Tile Collection</h3>
-<button onclick="addToCart('Designer Tile Collection')">
-Add To Cart
-</button>
-</div>
-</div>
-
-<div class="product">
-<img src="https://i.ibb.co/nNJk4Zm8/1000058338-1.jpg">
-<div class="product-content">
-<h3>Kota Stone Premium</h3>
-<button onclick="addToCart('Kota Stone Premium')">
-Add To Cart
-</button>
-</div>
-</div>
-
-<div class="product">
-<img src="https://i.ibb.co/NntVhpbQ/1000058351-1.jpg">
-<div class="product-content">
-<h3>Designer Tile Collection</h3>
-<button onclick="addToCart('Designer Tile Collection')">
-Add To Cart
-</button>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CART -->
 
 <section class="section">
 
@@ -631,9 +420,65 @@ target="_blank">
 
 emailjs.init("P6wKHr_MkAY5jJPi7");
 
-let cart = [];
+// Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
-function addToCart(product){
+function addToCart(product) {
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+    alert(product + ' added to cart');
+}
+
+function renderCart() {
+    const container = document.getElementById('cartItems');
+    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    if (currentCart.length === 0) {
+        container.innerHTML = 'No items added.';
+        return;
+    }
+    container.innerHTML = '';
+    currentCart.forEach(item => {
+        container.innerHTML += `<div class="cart-item">${item}</div>`;
+    });
+}
+
+// Render cart on page load
+renderCart();
+
+// Order form submission uses cart from localStorage
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    if (currentCart.length === 0) {
+        alert('Please add products first');
+        return;
+    }
+    const name = document.getElementById('customerName').value;
+    const phone = document.getElementById('customerPhone').value;
+    const templateParams = {
+        customer_name: name,
+        customer_phone: phone,
+        order_items: currentCart.join(', '),
+        owner_email: 'chander151973@gmail.com'
+    };
+    emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response);
+            alert('Order sent successfully!');
+            // Clear cart
+            localStorage.removeItem('cart');
+            cart = [];
+            renderCart();
+            document.getElementById('orderForm').reset();
+        })
+        .catch(function(error) {
+            console.error('EMAILJS ERROR:', error);
+            alert('Email sending failed. Check browser console (F12).');
+        });
+});
+
+
 
     cart.push(product);
 
