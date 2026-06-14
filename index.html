@@ -256,6 +256,13 @@ min-width:260px;
 
 <body>
 
+
+  <div class="hero-content">
+    <h1>Capt. Mahajan & Sons KotaStone</h1>
+    <p>Complete Stone & Tile Solutions Under One Roof</p>
+    <a href="#categories" class="btn">Shop Now</a>
+  </div>
+</section>
 <section class="section" id="categories">
   <h2 class="section-title">Our Categories</h2>
   <div class="category-grid">
@@ -263,30 +270,35 @@ min-width:260px;
       <div class="card-content">
         <h3>Kota Stone</h3>
         <p>Explore premium Kota Stone collections</p>
+        <button class="add-category" onclick="addToCart('Kota Stone')">Add to Cart</button>
       </div>
     </a>
     <a href="granite.html" class="category-card">
       <div class="card-content">
         <h3>Granite</h3>
         <p>Durable granite for any project</p>
+        <button class="add-category" onclick="addToCart('Granite')">Add to Cart</button>
       </div>
     </a>
     <a href="marble.html" class="category-card">
       <div class="card-content">
         <h3>Marble</h3>
         <p>Elegant marble designs</p>
+        <button class="add-category" onclick="addToCart('Marble')">Add to Cart</button>
       </div>
     </a>
     <a href="tiles.html" class="category-card">
       <div class="card-content">
         <h3>Tiles</h3>
         <p>Versatile tile options</p>
+        <button class="add-category" onclick="addToCart('Tiles')">Add to Cart</button>
       </div>
     </a>
     <a href="others.html" class="category-card">
       <div class="card-content">
         <h3>Others</h3>
         <p>Miscellaneous stone products</p>
+        <button class="add-category" onclick="addToCart('Others')">Add to Cart</button>
       </div>
     </a>
   </div>
@@ -317,13 +329,14 @@ min-width:260px;
   }
 </style>
 
-<section class="hero">
 
-<div class="hero-content">
+
+<section class="hero">
+    <div class="hero-content">
 <h1>Capt. Mahajan & Sons KotaStone</h1>
 <p>Complete Stone & Tile Solutions Under One Roof</p>
 
-<a href="#products" class="btn">Shop Now</a>
+<a href="#categories" class="btn">Shop Now</a>
 </div>
 
 </section>
@@ -415,7 +428,6 @@ target="_blank">
 <!-- EMAILJS -->
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
 emailjs.init("P6wKHr_MkAY5jJPi7");
 
@@ -474,9 +486,68 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     });
 });
 </script>
+
+
+emailjs.init("P6wKHr_MkAY5jJPi7");
+
+// Cart handling using localStorage
+let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
 function addToCart(product) {
-    cart.push(product);
-    localStorage.setItem('cart', JSON.stringify(cart));
+  cart.push(product);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+  alert(product + ' added to cart');
+}
+
+function renderCart() {
+  const container = document.getElementById('cartItems');
+  if (cart.length === 0) {
+    container.innerHTML = 'No items added.';
+    return;
+  }
+  container.innerHTML = '';
+  cart.forEach(item => {
+    container.innerHTML += `<div class="cart-item">${item}</div>`;
+  });
+}
+
+// Initialize cart display
+renderCart();
+
+// Order form submission
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (cart.length === 0) {
+    alert('Please add products first');
+    return;
+  }
+  const name = document.getElementById('customerName').value;
+  const phone = document.getElementById('customerPhone').value;
+  const templateParams = {
+    customer_name: name,
+    customer_phone: phone,
+    order_items: cart.join(', '),
+    owner_email: 'chander151973@gmail.com'
+  };
+  emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
+    .then(function(response) {
+      console.log('SUCCESS!', response);
+      alert('Order sent successfully!');
+      localStorage.removeItem('cart');
+      cart = [];
+      renderCart();
+      document.getElementById('orderForm').reset();
+    })
+    .catch(function(error) {
+      console.error('EMAILJS ERROR:', error);
+      alert('Email sending failed. Check browser console (F12).');
+    });
+});
+</script>
+
+
+    
     renderCart();
     alert(product + ' added to cart');
 }
@@ -541,7 +612,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
 
 
 
-    const container = document.getElementById("cartItems");
+
 
     if(cart.length === 0){
 
