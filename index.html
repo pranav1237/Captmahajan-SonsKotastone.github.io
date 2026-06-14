@@ -1,700 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capt. Mahajan & Sons KotaStone</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#f7f7f7;
-color:#222;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
-background:url('https://i.ibb.co/PZwqGCyq/3d-rendering-modern-luxury-hotel-office-reception-meeting-lounge.jpg') center/cover;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.55);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-padding:20px;
-color:white;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:1.2rem;
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 28px;
-background:#c6922d;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-background:#a97c20;
-transform:translateY(-2px);
-}
-
-/* SECTION */
-
-.section{
-padding:70px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:40px;
-font-size:2rem;
-}
-
-/* SHOP INFO */
-
-.info{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-/* PRODUCT CAROUSEL */
-
-.carousel-container{
-overflow:hidden;
-position:relative;
-}
-
-.carousel{
-display:flex;
-gap:20px;
-animation:slide 12s infinite linear;
-}
-
-.product{
-min-width:300px;
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-}
-
-.product img{
-width:100%;
-height:260px;
-object-fit:cover;
-}
-
-.product-content{
-padding:20px;
-}
-
-.product h3{
-margin-bottom:10px;
-}
-
-.product button{
-width:100%;
-padding:12px;
-border:none;
-background:#c6922d;
-color:white;
-border-radius:10px;
-cursor:pointer;
-font-weight:600;
-}
-
-.product button:hover{
-background:#a97c20;
-}
-
-@keyframes slide{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
-
-/* CART */
-
-.cart-box{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
-
-.cart-items{
-margin:15px 0;
-}
-
-.cart-item{
-padding:8px 0;
-border-bottom:1px solid #eee;
-}
-
-/* FORM */
-
-form{
-display:grid;
-gap:15px;
-margin-top:20px;
-}
-
-input{
-padding:14px;
-border:1px solid #ddd;
-border-radius:10px;
-}
-
-.send-btn{
-padding:15px;
-background:#25D366;
-color:white;
-border:none;
-border-radius:10px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px 20px;
-margin-top:60px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:30px;
-color:white;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-z-index:999;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2rem;
-}
-
-.hero p{
-font-size:1rem;
-}
-
-.product{
-min-width:260px;
-}
-}
-.category-nav{display:flex;justify-content:center;gap:20px;margin:20px 0;}
-.category-nav a{color:#fff;background:#c6922d;padding:10px 20px;border-radius:10px;text-decoration:none;transition:.3s;}
-.category-nav a:hover{background:#a97c20;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capt. Mahajan &amp; Sons KotaStone | Premium Stone &amp; Tile Solutions</title>
+  <meta name="description" content="Capt. Mahajan &amp; Sons KotaStone - Complete Stone &amp; Tile Solutions Under One Roof. Premium Kota Stone, Granite, Marble, Tiles and more.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Capt. Mahajan &amp; Sons KotaStone</h1>
+      <p>Complete Stone &amp; Tile Solutions Under One Roof</p>
+      <a href="#categories" class="btn-shop">Shop Now</a>
+    </div>
+  </section>
 
-  <div class="hero-content">
-    <h1>Capt. Mahajan & Sons KotaStone</h1>
-    <p>Complete Stone & Tile Solutions Under One Roof</p>
-    <a href="#categories" class="btn">Shop Now</a>
-  </div>
-</section>
-<section class="section" id="categories">
-  <h2 class="section-title">Our Categories</h2>
-  <div class="category-grid">
-    <a href="kota.html" class="category-card">
-      <div class="card-content">
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+    <h2 class="section-title">Our Categories</h2>
+    <div class="category-grid">
+
+      <div class="category-card fade-in" id="card-kota">
         <h3>Kota Stone</h3>
         <p>Explore premium Kota Stone collections</p>
-        <button class="add-category" onclick="addToCart('Kota Stone')">Add to Cart</button>
+        <div class="card-actions">
+          <a href="kota.html" class="btn-view">View Products</a>
+          <button class="add-cart-btn" onclick="addToCart('Kota Stone', this)">🛒 Add to Cart</button>
+        </div>
       </div>
-    </a>
-    <a href="granite.html" class="category-card">
-      <div class="card-content">
+
+      <div class="category-card fade-in" id="card-granite">
         <h3>Granite</h3>
         <p>Durable granite for any project</p>
-        <button class="add-category" onclick="addToCart('Granite')">Add to Cart</button>
+        <div class="card-actions">
+          <a href="granite.html" class="btn-view">View Products</a>
+          <button class="add-cart-btn" onclick="addToCart('Granite', this)">🛒 Add to Cart</button>
+        </div>
       </div>
-    </a>
-    <a href="marble.html" class="category-card">
-      <div class="card-content">
+
+      <div class="category-card fade-in" id="card-marble">
         <h3>Marble</h3>
         <p>Elegant marble designs</p>
-        <button class="add-category" onclick="addToCart('Marble')">Add to Cart</button>
+        <div class="card-actions">
+          <a href="marble.html" class="btn-view">View Products</a>
+          <button class="add-cart-btn" onclick="addToCart('Marble', this)">🛒 Add to Cart</button>
+        </div>
       </div>
-    </a>
-    <a href="tiles.html" class="category-card">
-      <div class="card-content">
+
+      <div class="category-card fade-in" id="card-tiles">
         <h3>Tiles</h3>
         <p>Versatile tile options</p>
-        <button class="add-category" onclick="addToCart('Tiles')">Add to Cart</button>
+        <div class="card-actions">
+          <a href="tiles.html" class="btn-view">View Products</a>
+          <button class="add-cart-btn" onclick="addToCart('Tiles', this)">🛒 Add to Cart</button>
+        </div>
       </div>
-    </a>
-    <a href="others.html" class="category-card">
-      <div class="card-content">
+
+      <div class="category-card fade-in" id="card-others">
         <h3>Others</h3>
         <p>Miscellaneous stone products</p>
-        <button class="add-category" onclick="addToCart('Others')">Add to Cart</button>
+        <div class="card-actions">
+          <a href="others.html" class="btn-view">View Products</a>
+          <button class="add-cart-btn" onclick="addToCart('Others', this)">🛒 Add to Cart</button>
+        </div>
       </div>
-    </a>
-  </div>
-</section>
 
-<style>
-  .category-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:1.5rem;
-    justify-items:center;
-    margin-top:20px;
-  }
-  .category-card{
-    display:block;
-    width:100%;
-    padding:2rem;
-    background:#c6922d;
-    color:#fff;
-    text-align:center;
-    border-radius:12px;
-    text-decoration:none;
-    transition:transform .3s, background .3s;
-  }
-  .category-card:hover{
-    background:#a97c20;
-    transform:translateY(-5px);
-  }
-</style>
+    </div>
+  </section>
 
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <div class="info">
+      <div class="card">
+        <h3>Premium Quality</h3>
+        <p>Best quality Kota Stone, Tiles and Stone solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Affordable Pricing</h3>
+        <p>Competitive rates for all residential and commercial projects.</p>
+      </div>
+      <div class="card">
+        <h3>Expert Guidance</h3>
+        <p>Professional support for selection and installation.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- CART & ORDER -->
+  <section class="section" id="cart-section">
+    <h2 class="section-title">Cart &amp; Order</h2>
+    <div class="cart-box">
+      <h3>Selected Products</h3>
+      <div id="cartItems" class="cart-items">No items added.</div>
+      <form id="orderForm">
+        <input type="text" id="customerName" placeholder="Your Name" required>
+        <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+        <button type="submit" class="send-btn">📩 Send Order via Email</button>
+      </form>
+    </div>
+  </section>
 
-<section class="hero">
-    <div class="hero-content">
-<h1>Capt. Mahajan & Sons KotaStone</h1>
-<p>Complete Stone & Tile Solutions Under One Roof</p>
+  <!-- FOOTER -->
+  <footer>
+    <h3>Capt. Mahajan &amp; Sons KotaStone</h3>
+    <p>Complete Stone &amp; Tile Solutions Under One Roof</p>
+    <p>Email: chander151973@gmail.com</p>
+    <p>Phone: 9785843101</p>
+  </footer>
 
-<a href="#categories" class="btn">Shop Now</a>
-</div>
+  <!-- WHATSAPP -->
+  <a class="whatsapp" href="https://wa.me/919785843101" target="_blank">💬</a>
 
-</section>
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("P6wKHr_MkAY5jJPi7");
 
-<!-- ABOUT -->
+    // Cart handling using localStorage
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
-<section class="section">
-
-<h2 class="section-title">Why Choose Us?</h2>
-
-<div class="info">
-
-<div class="card">
-<h3>Premium Quality</h3>
-<p>Best quality Kota Stone, Tiles and Stone solutions.</p>
-</div>
-
-<div class="card">
-<h3>Affordable Pricing</h3>
-<p>Competitive rates for all residential and commercial projects.</p>
-</div>
-
-<div class="card">
-<h3>Expert Guidance</h3>
-<p>Professional support for selection and installation.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Cart & Order</h2>
-
-<div class="cart-box">
-
-<h3>Selected Products</h3>
-
-<div id="cartItems" class="cart-items">
-No items added.
-</div>
-
-<form id="orderForm">
-
-<input
-type="text"
-id="customerName"
-placeholder="Customer Name"
-required>
-
-<input
-type="tel"
-id="customerPhone"
-placeholder="Phone Number"
-required>
-
-<button
-type="submit"
-class="send-btn">
-Send Order
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>Capt. Mahajan & Sons KotaStone</h3>
-
-<p>Complete Stone & Tile Solutions Under One Roof</p>
-
-<p>Email: chander151973@gmail.com</p>
-
-<p>Phone: 9785843101</p>
-
-</footer>
-
-<a
-class="whatsapp"
-href="https://wa.me/919785843101"
-target="_blank">
-💬
-</a>
-
-<!-- EMAILJS -->
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-emailjs.init("P6wKHr_MkAY5jJPi7");
-
-// Cart handling using localStorage
-let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-
-function addToCart(product) {
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  renderCart();
-  alert(product + ' added to cart');
-}
-
-function renderCart() {
-  const container = document.getElementById('cartItems');
-  if (cart.length === 0) {
-    container.innerHTML = 'No items added.';
-    return;
-  }
-  container.innerHTML = '';
-  cart.forEach(item => {
-    container.innerHTML += `<div class="cart-item">${item}</div>`;
-  });
-}
-
-// Initialize cart display
-renderCart();
-
-// Order form submission
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  if (cart.length === 0) {
-    alert('Please add products first');
-    return;
-  }
-  const name = document.getElementById('customerName').value;
-  const phone = document.getElementById('customerPhone').value;
-  const templateParams = {
-    customer_name: name,
-    customer_phone: phone,
-    order_items: cart.join(', '),
-    owner_email: 'chander151973@gmail.com'
-  };
-  emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
-    .then(function(response) {
-      console.log('SUCCESS!', response);
-      alert('Order sent successfully!');
-      localStorage.removeItem('cart');
-      cart = [];
-      renderCart();
-      document.getElementById('orderForm').reset();
-    })
-    .catch(function(error) {
-      console.error('EMAILJS ERROR:', error);
-      alert('Email sending failed. Check browser console (F12).');
-    });
-});
-</script>
-
-
-emailjs.init("P6wKHr_MkAY5jJPi7");
-
-// Cart handling using localStorage
-let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-
-function addToCart(product) {
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  renderCart();
-  alert(product + ' added to cart');
-}
-
-function renderCart() {
-  const container = document.getElementById('cartItems');
-  if (cart.length === 0) {
-    container.innerHTML = 'No items added.';
-    return;
-  }
-  container.innerHTML = '';
-  cart.forEach(item => {
-    container.innerHTML += `<div class="cart-item">${item}</div>`;
-  });
-}
-
-// Initialize cart display
-renderCart();
-
-// Order form submission
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  if (cart.length === 0) {
-    alert('Please add products first');
-    return;
-  }
-  const name = document.getElementById('customerName').value;
-  const phone = document.getElementById('customerPhone').value;
-  const templateParams = {
-    customer_name: name,
-    customer_phone: phone,
-    order_items: cart.join(', '),
-    owner_email: 'chander151973@gmail.com'
-  };
-  emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
-    .then(function(response) {
-      console.log('SUCCESS!', response);
-      alert('Order sent successfully!');
-      localStorage.removeItem('cart');
-      cart = [];
-      renderCart();
-      document.getElementById('orderForm').reset();
-    })
-    .catch(function(error) {
-      console.error('EMAILJS ERROR:', error);
-      alert('Email sending failed. Check browser console (F12).');
-    });
-});
-</script>
-
-
-    
-    renderCart();
-    alert(product + ' added to cart');
-}
-
-function renderCart() {
-    const container = document.getElementById('cartItems');
-    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
-    if (currentCart.length === 0) {
-        container.innerHTML = 'No items added.';
-        return;
+    function addToCart(product, btnEl) {
+      if (!cart.includes(product)) {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+      }
+      // Animate button feedback
+      if (btnEl) {
+        btnEl.classList.add('added');
+        btnEl.textContent = '✓ Added!';
+        setTimeout(() => {
+          btnEl.classList.remove('added');
+          btnEl.textContent = '🛒 Add to Cart';
+        }, 1500);
+      }
     }
-    container.innerHTML = '';
-    currentCart.forEach(item => {
-        container.innerHTML += `<div class="cart-item">${item}</div>`;
-    });
-}
 
-// Render cart on page load
-renderCart();
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
 
-// Order form submission uses cart from localStorage
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
-    if (currentCart.length === 0) {
+    function renderCart() {
+      const container = document.getElementById('cartItems');
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="no-items-text">No items added.</p>';
+        return;
+      }
+      container.innerHTML = '';
+      cart.forEach((item, i) => {
+        container.innerHTML += `
+          <div class="cart-item">
+            <span>${item}</span>
+            <button class="remove-item" onclick="removeFromCart(${i})">✕ Remove</button>
+          </div>
+        `;
+      });
+    }
+
+    // Initialize cart display
+    renderCart();
+
+    // Order form submission
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (cart.length === 0) {
         alert('Please add products first');
         return;
-    }
-    const name = document.getElementById('customerName').value;
-    const phone = document.getElementById('customerPhone').value;
-    const templateParams = {
+      }
+      const name = document.getElementById('customerName').value;
+      const phone = document.getElementById('customerPhone').value;
+      const templateParams = {
         customer_name: name,
         customer_phone: phone,
-        order_items: currentCart.join(', '),
+        order_items: cart.join(', '),
         owner_email: 'chander151973@gmail.com'
-    };
-    emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
+      };
+      
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      emailjs.send('service_yefr2yx', 'template_lzgf4nl', templateParams)
         .then(function(response) {
-            console.log('SUCCESS!', response);
-            alert('Order sent successfully!');
-            // Clear cart
-            localStorage.removeItem('cart');
-            cart = [];
-            renderCart();
-            document.getElementById('orderForm').reset();
+          console.log('SUCCESS!', response);
+          alert('Order sent successfully!');
+          localStorage.removeItem('cart');
+          cart = [];
+          renderCart();
+          document.getElementById('orderForm').reset();
         })
         .catch(function(error) {
-            console.error('EMAILJS ERROR:', error);
-            alert('Email sending failed. Check browser console (F12).');
+          console.error('EMAILJS ERROR:', error);
+          alert('Email sending failed. Check browser console (F12).');
+        })
+        .finally(function() {
+          submitBtn.disabled = false;
+          submitBtn.textContent = '📩 Send Order via Email';
         });
-});
-
-
-
-
-
-
-
-    
-
-}
-
-
-
-
-
-    if(cart.length === 0){
-
-        container.innerHTML = "No items added.";
-
-        return;
-    }
-
-    container.innerHTML = "";
-
-    cart.forEach(item => {
-
-        container.innerHTML += `
-            <div class="cart-item">${item}</div>
-        `;
-
     });
+  </script>
 
-}
-
-
-.addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    if(cart.length === 0){
-
-        alert("Please add products first");
-
-        return;
-    }
-
-    const name =
-    document.getElementById("customerName").value;
-
-    const phone =
-    document.getElementById("customerPhone").value;
-
-    const templateParams = {
-
-        customer_name: name,
-
-        customer_phone: phone,
-
-        order_items: cart.join(", "),
-
-        owner_email: "chander151973@gmail.com"
-
-    };
-
-    emailjs.send(
-        "service_yefr2yx",
-        "template_lzgf4nl",
-        templateParams
-    )
-    .then(function(response){
-
-        console.log("SUCCESS!", response);
-
-        alert("Order sent successfully!");
-
-        cart = [];
-
-    
-
-        document
-        .getElementById("orderForm")
-        .reset();
-
-    })
-    .catch(function(error){
-
-        console.error("EMAILJS ERROR:", error);
-
-        alert(
-            "Email sending failed. Check browser console (F12)."
-        );
-
-    });
-
-});
-
-</script>
 </body>
 </html>
