@@ -55,9 +55,9 @@ The website showcases products, allows customers to add products to a shopping c
 
 **Tagline:** Complete Stone & Tile Solutions Under One Roof
 
-**Email:** [chander151973@gmail.com](mailto:chander151973@gmail.com)
+**Email:** [abc@gmail.com
 
-**Phone:** +91 9785843101
+**Phone:** 123********
 
 ---
 
@@ -218,7 +218,7 @@ with
 5. EmailJS sends order details directly to:
 
 ```text
-chander151973@gmail.com
+abc@gmail.com
 ```
 
 6. Shop owner receives order instantly by email.
@@ -230,13 +230,13 @@ chander151973@gmail.com
 The floating WhatsApp button is configured for:
 
 ```text
-+91 9785843101
+123*********
 ```
 
 Link:
 
 ```text
-https://wa.me/919785843101
+https://wa.me/123******
 ```
 
 Customers can directly start a WhatsApp conversation with the shop owner.
