@@ -480,15 +480,15 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
 
 
 
-    cart.push(product);
 
-    renderCart();
 
-    alert(product + " added to cart");
+
+
+    
 
 }
 
-function renderCart(){
+
 
     const container = document.getElementById("cartItems");
 
@@ -511,8 +511,7 @@ function renderCart(){
 
 }
 
-document
-.getElementById("orderForm")
+
 .addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -555,7 +554,7 @@ document
 
         cart = [];
 
-        renderCart();
+    
 
         document
         .getElementById("orderForm")
